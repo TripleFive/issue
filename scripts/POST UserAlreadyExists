@@ -1,0 +1,6 @@
+pm.test("Status code is 409", function () {
+    pm.response.to.have.status(409);
+});
+pm.test("Response time is less than 200ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(200);
+});
